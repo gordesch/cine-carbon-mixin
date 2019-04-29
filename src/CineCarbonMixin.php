@@ -1,7 +1,6 @@
 <?php
 
-
-namespace CineCarbonMixin;
+namespace Gordesch;
 
 use Carbon\Carbon;
 use Carbon\Translator;

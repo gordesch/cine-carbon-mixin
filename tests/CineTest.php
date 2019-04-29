@@ -2,7 +2,7 @@
 
 use PHPUnit\Framework\TestCase;
 use Carbon\Carbon;
-use CineCarbonMixin\CineCarbonMixin;
+use Gordesch\CineCarbonMixin;
 
 final class CineTest extends TestCase
 {
