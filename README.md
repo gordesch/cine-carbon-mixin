@@ -9,13 +9,13 @@ A mixin for [Carbon](https://github.com/briannesbitt/carbon) to provide a french
 ## Installation
 
 ```bash
-$ composer require gordesch/cine-carbon-mixin
+$ composer require gordesch/cine-carbon-mixin:^1.0.0
 ```
 
 ## Usage
 
 ```php
-Carbon::mixin(new Gordesch\CineCarbonMixin());
+Carbon::mixin(new \Gordesch\CineCarbonMixin());
 Carbon::now()->cine()->startOfWeek()->dayOfWeek;     // 3 (Wednesday)
 ```
 
