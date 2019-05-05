@@ -14,4 +14,15 @@ final class CineTest extends TestCase
             Carbon::WEDNESDAY
         );
     }
+
+    public function testProgrammingWeekIsDifferentFromCalendarWeek(): void
+    {
+        Carbon::mixin(new CineCarbonMixin());
+        $monday = Carbon::parse('next monday')->cine();
+        $programming_week_number = $monday->programmingWeek();
+        $this->assertNotEquals(
+            $monday->isoFormat('WW'),
+            $programming_week_number
+        );
+    }
 }

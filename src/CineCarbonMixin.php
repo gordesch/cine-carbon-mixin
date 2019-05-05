@@ -17,4 +17,13 @@ class CineCarbonMixin
             return $this->locale($locale_cinema);
         };
     }
+
+    public function programmingWeek() {
+        return function () {
+            while ($this->toMutable()->dayOfWeek !== CARBON::WEDNESDAY) {
+                $this->subDay();
+            }
+            return $this->isoFormat('YYYY-WW');
+        };
+    }
 }
